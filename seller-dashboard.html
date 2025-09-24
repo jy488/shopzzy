@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>셀러센터</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <script defer src="seller-dashboard.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+  <a href="index.html">홈</a>
+  <a href="seller-dashboard.html" id="nav-seller" class="hidden">셀러센터</a>
+  <a href="admin-dashboard.html" id="nav-admin" class="hidden">관리자센터</a>
+  <button id="nav-logout">로그아웃</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>셀러센터</h1>
+    <section>
+      <h2>내 브랜드 상품</h2>
+      <div id="seller-products">
+        <!-- 셀러가 등록한 브랜드별 상품 목록 -->
+      </div>
+    </section>
+
+    <section>
+      <h2>상품 추가</h2>
+      <form id="add-product-form">
+        <input type="text" name="name" placeholder="상품명" required><br>
+        <input type="number" name="price" placeholder="가격" required><br>
+        <input type="text" name="brand" placeholder="브랜드명" required><br>
+        <button type="submit">상품 추가</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

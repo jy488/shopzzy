@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+  <script defer src="signup.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="cart.html">장바구니</a>
+      <a href="login.html">로그인</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>회원가입</h1>
+    <form id="signup-form">
+      <input type="text" name="username" placeholder="아이디" required /><br />
+      <input type="password" name="password" placeholder="비밀번호" required /><br />
+      <input type="password" name="confirmPassword" placeholder="비밀번호 확인" required /><br />
+      <select name="role">
+        <option value="buyer">구매자</option>
+        <option value="seller">셀러(관리자 승인 필요)</option>
+      </select><br />
+      <button type="submit">가입하기</button>
+    </form>
+    <p><a href="login.html">← 로그인으로 돌아가기</a></p>
+  </main>
+</body>
+</html>

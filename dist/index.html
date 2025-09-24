@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우리 쇼핑몰</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>우리 쇼핑몰</h1>
+  <nav>
+    <a href="index.html">홈</a>
+    <a href="mypage.html" id="nav-mypage" class="hidden">마이페이지</a>
+    <a href="seller-dashboard.html" id="nav-seller" class="hidden">셀러 센터</a>
+    <a href="admin-dashboard.html" id="nav-admin" class="hidden">관리자</a>
+    <a href="login.html" id="nav-login">로그인</a>
+    <button id="nav-logout" class="hidden">로그아웃</button>
+  </nav>
+</header>
+
+<main id="product-list">
+  <h2>상품 목록</h2>
+  <div class="product-card" data-id="1" data-name="상품 1" data-price="10000">
+    <img src="images/sample1.jpg" alt="상품1">
+    <h3>상품 1</h3>
+    <p>가격: 10,000원</p>
+    <button class="add-to-cart">장바구니에 추가</button>
+  </div>
+  <div class="product-card" data-id="2" data-name="상품 2" data-price="15000">
+    <img src="images/sample2.jpg" alt="상품2">
+    <h3>상품 2</h3>
+    <p>가격: 15,000원</p>
+    <button class="add-to-cart">장바구니에 추가</button>
+  </div>
+
+  <a href="cart.html" class="btn">장바구니 보기 🛒</a>
+</main>
+
+<footer>
+  <p>&copy; 2025 우리 쇼핑몰</p>
+</footer>
+
+<script src="js/cart-add.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리자센터</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="admin-dashboard.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+  <a href="index.html">홈</a>
+  <a href="seller-dashboard.html" id="nav-seller" class="hidden">셀러센터</a>
+  <a href="admin-dashboard.html" id="nav-admin" class="hidden">관리자센터</a>
+  <button id="nav-logout">로그아웃</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>관리자센터</h1>
+
+    <section>
+      <h2>회원 목록</h2>
+      <div id="accounts-list"></div>
+    </section>
+
+    <section>
+      <h2>셀러 승인 요청</h2>
+      <div id="seller-requests"></div>
+    </section>
+  </main>
+  <h2>승인 대기 셀러</h2>
+<div id="seller-requests"></div>
+
+<h2>전체 계정</h2>
+<div id="accounts-list"></div>
+
+</body>
+</html>

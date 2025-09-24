@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니 - 우리 쇼핑몰</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+  <script defer src="cart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>우리 쇼핑몰</h1>
+      <nav>
+        <a href="index.html">홈</a>
+        <a href="mypage.html" id="nav-mypage" class="hidden">마이페이지</a>
+        <a href="seller-dashboard.html" id="nav-seller" class="hidden"
+          >셀러 센터</a
+        >
+        <a href="admin-dashboard.html" id="nav-admin" class="hidden">관리자</a>
+        <a href="login.html" id="nav-login">로그인</a>
+        <button id="nav-logout" class="hidden">로그아웃</button>
+      </nav>
+    </header>
+
+    <main>
+      <h2>장바구니</h2>
+      <ul id="cart-list"></ul>
+      <p>총 합계: <span id="total-price">0</span>원</p>
+      <button id="checkout">결제하기</button>
+    </main>
+    <main>
+      <h2>장바구니</h2>
+      <ul id="cart-list"></ul>
+      <p>총 합계: <span id="total-price">0</span>원</p>
+      <button id="checkout">결제하기</button>
+    </main>
+    <script src="js/cart.js"></script>
+    <script>
+      function renderCart() {
+        const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        const list = document.getElementById("cart-list");
+        const totalPriceEl = document.getElementById("total-price");
+
+        list.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - ${item.price}원 x ${item.quantity}`;
+          list.appendChild(li);
+          total += item.price * item.quantity;
+        });
+
+        totalPriceEl.textContent = total.toLocaleString();
+      }
+
+      document.getElementById("checkout").addEventListener("click", () => {
+        alert("결제가 완료되었습니다!");
+        localStorage.removeItem("cart");
+        renderCart();
+      });
+
+      renderCart();
+    </script>
+
+    <footer>
+      <p>&copy; 2025 우리 쇼핑몰</p>
+    </footer>
+  </body>
+</html>
